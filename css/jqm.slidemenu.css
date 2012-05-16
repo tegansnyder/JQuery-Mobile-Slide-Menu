@@ -1,0 +1,85 @@
+.slidemenu {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 100%;
+	background-color: #DFDFDF;
+	-webkit-box-shadow: 5px 0px 5px -2px #CDCDCD;
+	box-shadow: 5px 0px 5px -2px #CDCDCD;
+	z-index: 2147483647;
+	display: none;
+	overflow: hidden;
+}
+
+.slidemenu h3{
+	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#000;
+	text-shadow: 0 1px 0 white;
+	margin:0;
+	padding:4px 0 4px 10px;
+	background: rgb(238,238,238); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+	border-top:solid #E1E1E1 1px;
+	border-bottom:solid #B2B2B2 1px;
+}
+
+.slidemenu ul {
+	margin: 0;
+	padding: 0;
+	width: inherit;
+}
+
+.slidemenu ul li {
+	list-style-type: none;
+	margin: 0px 0;
+}
+
+.slidemenu ul li a:link, .slidemenu ul li a:visited {
+	border-bottom: solid #D4D4D4 1px;
+	border-top: solid #EAEAEA 1px;
+	color: #000;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	width: 240px;
+	display: block;
+	padding: 10px 0px 10px 10px;
+	text-shadow: 0px 1px 1px #fff;
+}
+
+.slidemenu ul li img {
+	margin-right:8px;
+}
+
+.slidemenu ul li a:hover, .slidemenu ul li a:active {
+	background-color: #D7D7D7;
+}
+		
+.ui-icon-smico {
+	background-image: url("../img/smico.png");
+}
+
+/* THESE ARE JUST EXAMPLE STYLES BELOW */
+
+#profile {
+	background-color:#000;
+	overflow: hidden;
+	height: 91px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile_info {
+	position: relative;
+	left: 88px;
+	top:-70px;
+	font-size: 16px;
+	color: #FFF;
+	text-shadow: 0 0px 0 black;
+}

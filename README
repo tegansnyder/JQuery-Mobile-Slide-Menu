@@ -1,0 +1,6 @@
+jQuery Mobile - Slide Menu Example
+=======================
+
+This is a slide menu example similar to how you see apps like Highlight, Facebook, and Path doing it. Click the icon at the top left of the screen to expose the menu. When the menu is exposed it resizes the data-role="page" container and is position absolutely above all other elements.
+
+You can also swipe left and swipe right to open/close the menu.

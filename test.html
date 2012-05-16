@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<title>Slide Menu by Tegan Snyder</title>
+
+	<!--Include JQM and JQ-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	
+	<!--JQM SlideMenu-->
+	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
+	<script src="js/jqm.slidemenu.js"></script>
+
+</head>
+
+<body>
+
+	<div id="slidemenu">
+		
+		<div id="profile">
+			<img src="img/tegan.jpg">
+			<div class="profile_info"><strong>Tegan Snyder</strong><br><small>Web &amp; Mobile Developer</small></div>
+		</div>
+	
+		<h3>Menu</h3>
+	
+		<ul>
+			<li><a href="test.html" rel="external"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico2.png">Tegan Snyder</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico4.png">Help</a></li>
+		</ul>
+		
+	</div>
+
+	<div data-role="page">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu</h1>
+		</div>
+
+		<div data-role="content">	
+			<p>This is a slide menu example similar to how you see apps like Highlight, Facebook, and Path doing it. Click the icon at the top left of the screen to expose the menu. When the menu is exposed it resizes the data-role="page" container and is position absolutely above all other elements.</p>
+				<p>Example by <a href="http://www.tegdesgin.com">Tegan Snyder</p>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
