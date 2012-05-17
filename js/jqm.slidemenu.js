@@ -13,6 +13,9 @@ $(document).on("pageinit",":jqmData(role='page')", function(){
 	$(document).on("click", ":jqmData(slidemenu)", function() {
 		slidemenu(sm);
 	});
+	$(document).on("click", "a:not(:jqmData(slidemenu))", function(e) {
+		slidemenu(sm);
+	});
 
 	$(window).on('resize', function(){
 	
