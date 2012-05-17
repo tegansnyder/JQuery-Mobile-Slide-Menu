@@ -9,7 +9,6 @@ $(document).on("pageinit",":jqmData(role='page')", function(){
 	$(document).on("swiperight",":jqmData(role='page')", function(){
 		slidemenu(sm);
 	});
-	
 	$(document).on("click", ":jqmData(slidemenu)", function() {
 		slidemenu(sm);
 	});
@@ -39,7 +38,7 @@ function slidemenu(sm) {
 	
 		sm.show();
 		var w = '240px';
-		sm.animate({'width': w}, 'fast');
+		sm.animate({width: w, avoidTransforms: false, useTranslate3d: true}, 'fast');
 		$(":jqmData(role='page')").css('left', w);
 		$(this).data('slideopen', true);
 
@@ -52,10 +51,9 @@ function slidemenu(sm) {
 	} else {
 	
 		var w = '0px';
-		sm.animate({'width': w}, 'fast', function(){sm.hide()});
+		sm.animate({width: w, avoidTransforms: false, useTranslate3d: true}, 'fast', function(){sm.hide()});
 		$(":jqmData(role='page')").css('left', w);
 		$(this).data('slideopen', false);
-		
 		$(":jqmData(slidemenu)").css('margin-left', '0px');
 	}
 }
