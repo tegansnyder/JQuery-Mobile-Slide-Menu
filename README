@@ -1,8 +1,14 @@
 jQuery Mobile - Slide Menu Example
-=======================
+==============================================
 
-UPDATED 5/17 - Added Hardware Acceleration for JQuery Animate using Ben Barnett's JQuery-Animate-Enhanced http://playground.benbarnett.net/jquery-animate-enhanced/
+This is a hardware accelerated slide menu example. I modeled it after Facebook's famous menu. Click the icon at the top left of the screen to expose the menu. You can also swipe left/right activate it. When the menu is exposed it resizes the data-role="page" container and is position absolutely above all other elements.
+			
+Note:
+==============================================
+Menu would work best in a Phonegap application with the device orientation locked to Portrait.
 
-This is a slide menu example similar to how you see apps like Highlight, Facebook, and Path doing it. Click the icon at the top left of the screen to expose the menu. When the menu is exposed it resizes the data-role="page" container and is position absolutely above all other elements.
 
-You can also swipe left and swipe right to open/close the menu.
+Credits:
+==============================================
+Animate Enhanced by Ben Barnett
+http://playground.benbarnett.net/jquery-animate-enhanced/
