@@ -10,7 +10,8 @@ $(document).on("pageinit",":jqmData(role='page')", function(){
 	$(document).on("swiperight",":jqmData(role='page')", function(){
 		slidemenu(sm);
 	});
-	$(document).on("click", ":jqmData(slidemenu)", function() {
+	$(document).on("click", ":jqmData(slidemenu)", function(event) {
+		event.stopImmediatePropagation();
 		slidemenu(sm);
 	});
 	$(document).on("click", "a:not(:jqmData(slidemenu))", function(e) {
