@@ -64,11 +64,11 @@
 
 	</div>
 
-	<div data-role="page">
+	<div id="one" data-role="page">
 
 		<div data-role="header" data-position="fixed">
 			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
-			<h1>Slide Menu</h1>
+			<h1>Slide Menu: Page one</h1>
 		</div>
 
 		<div data-role="content">
@@ -78,6 +78,8 @@
 
 			<div data-role="collapsible" data-content-theme="c"><h3>Click me!</h3>Text...</div>
 
+      <a data-role="button" href="#two">Go to page "two"</a>
+
 			<p>Note: Menu would work best in a Phonegap application with the device orientation locked to Portrait.
 
 				<p>Example by <a href="http://www.tegdesign.com">Tegan Snyder</a></p>
@@ -86,6 +88,22 @@
 
 	</div>
 
+	<div id="two" data-role="page">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu: Page two</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Second page only for testing.</p>
+
+			<p>Test: click in slidemenu button. You should be yet in second page.</p>
+
+      <a data-role="button" href="#one">Go to page "one" (go back)</a>
+		</div>
+
+	</div>
 </body>
 
 </html>
