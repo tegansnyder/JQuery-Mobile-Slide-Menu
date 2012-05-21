@@ -92,8 +92,12 @@
 	width: 30px;
 }
 
-/* THESE ARE JUST EXAMPLE STYLES BELOW */
 
+/* THIS CAN BE TAKEN OUT IF OVERRIDES JQM EASING DEFAULTS */
+.in,.out{-webkit-animation-timing-function: ease-in-out;-webkit-animation-duration:50ms !important;}
+
+
+/* THESE ARE JUST EXAMPLE STYLES BELOW */
 #profile {
 	background-color:#32394A;
 	border-bottom: 1px solid #242A37;

@@ -18,6 +18,10 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	<script src="js/jquery.animate-enhanced.min.js"></script>
+	
+	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
+	<script src="js/jqm.globals.js"></script>
+	
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 
 	<!--JQM SlideMenu-->
@@ -29,38 +33,110 @@
 <body>
 
 	<div id="slidemenu">
-		
+
 		<div id="profile">
 			<img src="img/tegan.jpg">
 			<div class="profile_info"><strong>Tegan Snyder</strong><br><small>Web &amp; Mobile Developer</small></div>
 		</div>
-	
+
 		<h3>MENU</h3>
-	
+
 		<ul>
-			<li><a href="test.html" rel="external"><img src="img/smico3.png">Activity</a></li>
-			<li><a href="test.html" rel="external"><img src="img/smico2.png">Tegan Snyder</a></li>
-			<li><a href="test.html" rel="external"><img src="img/smico5.png">Invite Friends</a></li>
-			<li><a href="test.html" rel="external"><img src="img/smico6.png">Settings</a></li>
-			<li><a href="test.html" rel="external"><img src="img/smico4.png">Help</a></li>
+			<li><a href="#two"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="#three"><img src="img/smico2.png">Tegan Snyder</a></li>
+			<li><a href="#four"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="#two"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="#one"><img src="img/smico4.png">Help</a></li>
 		</ul>
-		
+
+		<h3>SOMETHING</h3>
+
+		<ul>
+			<li><a href="test.html"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="test.html"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="test.html"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="test.html"><img src="img/smico4.png">Help</a></li>
+			<li><a href="test.html"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="test.html"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="test.html"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="test.html"><img src="img/smico4.png">Help</a></li>
+			<li><a href="test.html"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="test.html"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="test.html"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="test.html"><img src="img/smico4.png">Help</a></li>
+		</ul>
+
 	</div>
 
-	<div data-role="page">
+	<div id="one" data-role="page" data-theme="a">
 
 		<div data-role="header" data-position="fixed">
 			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
-			<h1>Slide Menu</h1>
+			<h1>Slide Menu: Page one</h1>
 		</div>
 
-		<div data-role="content">	
+		<div data-role="content">
 			<p>This is a hardware accelerated slide menu example. I modeled it after Facebook's famous menu. Click the icon at the top left of the screen to expose the menu. You can also swipe left/right activate it. When the menu is exposed it resizes the data-role="page" container and is position absolutely above all other elements.</p>
-			
+
+			<p>Test: click in other element clickable. For example: the next collapsible.</p>
+
+			<div data-role="collapsible" data-content-theme="a" data-mini="true"><h3>Click me!</h3>If the slide menu was open now it is closed.</div>
+
 			<p>Note: Menu would work best in a Phonegap application with the device orientation locked to Portrait.
-			
+
 				<p>Example by <a href="http://www.tegdesign.com">Tegan Snyder</a></p>
 				<p>Animate Enhanced by <a href="http://playground.benbarnett.net/jquery-animate-enhanced/">Ben Barnett</a></p>
+		</div>
+
+	</div>
+
+	<div id="two" data-role="page" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu: Page 2</h1>
+			<a href="#one" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
+
+		<div data-role="content">
+			<p>Page only for testing.</p>
+
+			<p>Click in slidemenu button this is a multi-page example</p>
+			
+		</div>
+
+	</div>
+	
+	<div id="three" data-role="page" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu: Page 3</h1>
+			<a href="#one" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
+
+		<div data-role="content">
+			<p>Page only for testing.</p>
+
+			<p>Click in slidemenu button this is a multi-page example</p>
+			
+		</div>
+
+	</div>
+	
+	<div id="four" data-role="page" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu: Page 4</h1>
+			<a href="#one" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
+
+		<div data-role="content">
+			<p>Page only for testing.</p>
+
+			<p>Click in slidemenu button this is a multi-page example</p>
+			
 		</div>
 
 	</div>
