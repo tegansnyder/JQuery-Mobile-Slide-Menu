@@ -1,6 +1,8 @@
 jQuery Mobile - Slide Menu Example
 ==============================================
 
+DEMO: http://www.tegdesign.com/tegansnyder-JQuery-Mobile-Slide-Menu
+
 This is a hardware accelerated slide menu example. I modeled it after Facebook's famous menu. Click the icon at the top left of the screen to expose the menu. You can also swipe left/right activate it. When the menu is exposed it resizes the data-role="page" container and is position absolutely above all other elements.
 			
 Note:
