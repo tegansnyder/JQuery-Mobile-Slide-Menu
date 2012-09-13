@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="HandheldFriendly" content="True">
@@ -15,17 +14,19 @@
 
 	<!--Include JQM and JQ-->
 	<link rel="stylesheet" href="css/themes/jqmfb.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.structure.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script src="js/jquery.animate-enhanced.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	
+	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
+	<script src="js/jqm.globals.js"></script>
+	
+	<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
 
 	<!--JQM SlideMenu-->
 	<link rel="stylesheet" href="css/jqm.slidemenu.css" />
 	<script src="js/jqm.slidemenu.js"></script>
-
 </head>
-
 <body>
 
 	<div id="slidemenu">
@@ -38,33 +39,33 @@
 		<h3>MENU</h3>
 
 		<ul>
-			<li><a href="test.html" rel="external"><img src="img/smico3.png">Activity</a></li>
-			<li><a href="test.html" rel="external"><img src="img/smico2.png">Tegan Snyder</a></li>
-			<li><a href="test.html" rel="external"><img src="img/smico5.png">Invite Friends</a></li>
-			<li><a href="test.html" rel="external"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="#main_page"><img src="img/smico3.png">Home</a></li>
+			<li><a href="#another_page"><img src="img/smico2.png">Tegan Snyder</a></li>
+			<li><a href="#another_page2"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="#another_page3"><img src="img/smico6.png">Settings</a></li>
 			<li><a href="test.html" rel="external"><img src="img/smico4.png">Help</a></li>
 		</ul>
 
 		<h3>SOMETHING</h3>
 
 		<ul>
-			<li><a href="test.html"><img src="img/smico3.png">Activity</a></li>
-			<li><a href="test.html"><img src="img/smico5.png">Invite Friends</a></li>
-			<li><a href="test.html"><img src="img/smico6.png">Settings</a></li>
-			<li><a href="test.html"><img src="img/smico4.png">Help</a></li>
-			<li><a href="test.html"><img src="img/smico3.png">Activity</a></li>
-			<li><a href="test.html"><img src="img/smico5.png">Invite Friends</a></li>
-			<li><a href="test.html"><img src="img/smico6.png">Settings</a></li>
-			<li><a href="test.html"><img src="img/smico4.png">Help</a></li>
-			<li><a href="test.html"><img src="img/smico3.png">Activity</a></li>
-			<li><a href="test.html"><img src="img/smico5.png">Invite Friends</a></li>
-			<li><a href="test.html"><img src="img/smico6.png">Settings</a></li>
-			<li><a href="test.html"><img src="img/smico4.png">Help</a></li>
+			<li><a href="#another_page3"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="#another_page"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico4.png">Help</a></li>
+			<li><a href="#another_page2"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="#main_page"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="#another_page"><img src="img/smico4.png">Help</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico3.png">Activity</a></li>
+			<li><a href="#another_page2"><img src="img/smico5.png">Invite Friends</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico6.png">Settings</a></li>
+			<li><a href="test.html" rel="external"><img src="img/smico4.png">Help</a></li>
 		</ul>
 
 	</div>
 
-	<div data-role="page">
+	<div data-role="page" id="main_page" data-theme="a">
 
 		<div data-role="header" data-position="fixed">
 			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
@@ -76,12 +77,58 @@
 
 			<p>Note: Menu would work best in a Phonegap application with the device orientation locked to Portrait.
 
-				<p>Example by <a href="http://www.tegdesign.com">Tegan Snyder</a></p>
-				<p>Animate Enhanced by <a href="http://playground.benbarnett.net/jquery-animate-enhanced/">Ben Barnett</a></p>
+			<p>Example by <a href="http://www.tegdesign.com">Tegan Snyder</a></p>
+			<p>Animate Enhanced by <a href="http://playground.benbarnett.net/jquery-animate-enhanced/">Ben Barnett</a></p>
+			<p>Samuel L. Ipsum for <a href="http://slipsum.com">lorem ipsum</a>
 		</div>
 
 	</div>
+	
+	<div data-role="page" id="another_page" data-theme="a">
 
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu</h1>
+		</div>
+
+		<div data-role="content">
+		
+			<h2>This is an example of another page loaded</h2>
+			<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="another_page2" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu</h1>
+		</div>
+
+		<div data-role="content">
+		
+			<h2>Lookie HERE!</h2>
+			<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="another_page3" data-theme="a">
+
+		<div data-role="header" data-position="fixed">
+			<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+			<h1>Slide Menu</h1>
+		</div>
+
+		<div data-role="content">
+		
+			<h2>Some stuff and stuff</h2>
+			<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+		</div>
+
+	</div>
+	
+	
 </body>
-
 </html>
