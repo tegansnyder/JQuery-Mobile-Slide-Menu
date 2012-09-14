@@ -1,73 +1,68 @@
 $(document).on("pageinit", function(e){
 
-	var activePage = $(e.target);
-	var page_id = activePage.attr('id');
-	
-	$("#"+ page_id +" :jqmData(slidemenu)").addClass('slidemenu_btn');
-	var sm = $($("#"+ page_id +" :jqmData(slidemenu)").data('slidemenu'));
+	$("#"+ $(e.target).attr('id') +" :jqmData(slidemenu)").addClass('slidemenu_btn');
+	var sm = $($("#"+ $(e.target).attr('id') +" :jqmData(slidemenu)").data('slidemenu'));
 	sm.addClass('slidemenu');
+	
+	$(document).on("click",".ui-page-active", function(e){
+		if (sm.data('slideopen')) {
+			$(".ui-page-active :jqmData(role='header')").removeClass('ui-fixed-hidden');
+		}
+	});
 
-	$(document).on("swipeleft",".ui-page-active", function(e){
-		slidemenu(sm, false);
+	$(document).on("swipeleft swiperight",".ui-page-active", function(e){
+		console.log('b');
 		e.stopImmediatePropagation();
 		e.preventDefault();
+		slidemenu(sm, sm.data('slideopen'));
 	});
-	$(document).on("swiperight",".ui-page-active", function(e){
-		slidemenu(sm, false);
-		e.stopImmediatePropagation();
-		e.preventDefault();
-	});
+
 	$(document).on("click", ".ui-page-active :jqmData(slidemenu)", function(e) {
-		slidemenu(sm, false);
+		slidemenu(sm, sm.data('slideopen'));
 		e.stopImmediatePropagation();
 		e.preventDefault();
 	});
+	
 	$(document).on("click", "a:not(:jqmData(slidemenu))", function(e) {
 		slidemenu(sm, true);
 	});
 
 	$(window).on('resize', function(e){
-
-		if ($(":jqmData(slidemenu)").data('slideopen')) {
-
-			var sm = $($(":jqmData(slidemenu)").data('slidemenu'));
-			var w = '240px';
-
-			sm.css('width', w);
+		if (sm.data('slideopen')) {
+			console.log('sd');
+			sm.css('top', getPageScroll()[1] + 'px');
+			sm.css('width', '240px');
 			sm.height(viewport().height);
-
-			$(":jqmData(role='page')").css('left', w);
+			$(":jqmData(role='page')").css('left', '240px');
 		}
-
+	});
+	
+	$(window).scroll(function() {
+		if (sm.data('slideopen')) {
+			sm.css('top', getPageScroll()[1] + 'px');
+		}
 	});
 
 });
 
 function slidemenu(sm, only_close) {
-
 	sm.height(viewport().height);
-
-	if (!$(this).data('slideopen') && !only_close) {
-
-		sm.show();
-		var w = '240px';
-		sm.animate({width: w, avoidTransforms: false, useTranslate3d: true}, 'fast');
-		$(".ui-page-active").css('left', w);
-		$(this).data('slideopen', true);
-
+	if (!sm.data('slideopen') && !only_close) {
+		sm.show().animate({width: '240px', avoidTransforms: false, useTranslate3d: true}, 'fast');
+		$(".ui-page-active").css('left', '240px');
+		sm.data('slideopen', true);
 		if ($(".ui-page-active :jqmData(role='header')").data('position') == 'fixed') {
-			$(".ui-page-active :jqmData(slidemenu)").css('margin-left', parseInt(w.split('px')[0]) + 10 + 'px');
+			$(".ui-page-active :jqmData(slidemenu)").css('margin-left', '250px');
 		} else {
 			$(".ui-page-active :jqmData(slidemenu)").css('margin-left', '10px');
 		}
-
 	} else {
-		var w = '0px';
-		sm.animate({width: w, avoidTransforms: false, useTranslate3d: true}, 'fast', function(){sm.hide()});
-		$(".ui-page-active").css('left', w);
-		$(this).data('slideopen', false);
+		sm.animate({width: '0px', avoidTransforms: false, useTranslate3d: true}, 'fast', function(){sm.hide()});
+		$(".ui-page-active").css('left', '0px');
+		sm.data('slideopen', false);
 		$(".ui-page-active :jqmData(slidemenu)").css('margin-left', '0px');
 	}
+	return false;
 }
 
 function viewport(){
@@ -78,4 +73,19 @@ function viewport(){
 		e = document.documentElement || document.body;
 	}
 	return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+}
+
+function getPageScroll() {
+    var xScroll, yScroll;
+    if (self.pageYOffset) {
+      yScroll = self.pageYOffset;
+      xScroll = self.pageXOffset;
+    } else if (document.documentElement && document.documentElement.scrollTop) {
+      yScroll = document.documentElement.scrollTop;
+      xScroll = document.documentElement.scrollLeft;
+    } else if (document.body) {// all other Explorers
+      yScroll = document.body.scrollTop;
+      xScroll = document.body.scrollLeft;
+    }
+    return new Array(xScroll,yScroll)
 }
